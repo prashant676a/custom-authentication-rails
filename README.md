@@ -1,24 +1,5 @@
-# README
+### README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a custom authentication project in which we can signup, login and view the home page after signup.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+password is hashed before storing in database.For that purpose bcrypt gem is used.
