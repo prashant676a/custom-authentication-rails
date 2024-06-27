@@ -1,0 +1,32 @@
+<div class="text-center">
+    <h1>Registration</h1>
+
+    <%= form_with(model: @user, url: registrations_path, local: true) do |form|%>
+        <!-- Display error messages of form-->
+
+        <% if form.object.errors.full_messages.any? %>
+            <ul class="error">
+                <% form.object.errors.full_messages.each do |msg|%>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        <% end %>
+
+        <!-- Field of registration form -->
+        <div class="row">
+            <%= form.label :email %>
+            <%= form.text_field :email, placeholder: 'Please enter your email id'%>
+        </div>
+        <div class="row">
+            <%= form.label :password %>
+            <%= form.password_field :password, placeholder: 'Please enter your password'%>
+        </div>
+        <div class="row">
+            <%= form.label :password_confirmation %>
+            <%= form.password_field :password_confirmation, placeholder: 'Please enter your password confirmation'%>
+        </div>
+        <div class="row">
+            <%= form.submit 'Sign Up'%>
+        </div>
+    <% end %>
+</div>
